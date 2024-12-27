@@ -1,0 +1,21 @@
+package chapter01;
+
+public class D_Operator {
+
+	public static void main(String[] args) {
+		
+		int a = 15, b = 2;
+		double c = 15.0, d = 7.0;
+		
+		int intResult = 0;
+		double doubleResult = 0.0;
+
+	}
+
+}
+
+
+
+
+
+

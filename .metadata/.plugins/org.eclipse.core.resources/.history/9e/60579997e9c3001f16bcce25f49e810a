@@ -1,0 +1,11 @@
+package chapter01;
+
+public class B_IO {
+
+	public static void main(String[] args) {
+		
+		// 콘솔 출력
+		
+	}
+
+}

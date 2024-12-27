@@ -1,0 +1,32 @@
+package chapter01;
+
+public class C_DataType {
+
+	public static void main(String[] args) {
+		
+		// 변수의 데이터 타입
+		// 기본형 데이터 타입, 참조형 데이터 타입
+		
+		// 기본형 데이터 타입
+		
+		// 정수형 데이터 타입 : 실수부가 존재하지 않음, 부호를 가지고 있음
+		
+		// byte: 1byte(8bit)의 크기를 가지는 정수형 데이터 타입
+		// -128 ~ +127
+		byte byte1 = -100;
+		// byte byte2 = 128;
+		
+		// short: 2byte(16bit)의 크기를 가지는 정수형 데이터 타입
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+package chapter01;
+
+public class D_Operator {
+
+	public static void main(String[] args) {
+		
+		int a = 15, b = 2;
+		double c = 15.0, d = 7.0;
+		
+		int intResult = 0;
+		double doubleResult = 0.0;
+		
+		// 산술 연산자 : 사칙연산을 수행하는 연산자
+
+	}
+
+}
+
+
+
+
+
+
