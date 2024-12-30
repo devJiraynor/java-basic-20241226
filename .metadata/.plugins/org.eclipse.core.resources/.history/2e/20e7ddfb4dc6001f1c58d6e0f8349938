@@ -154,7 +154,7 @@ public class D_Operator {
 		
 		// 삼항 연산자: 조건에 따라 지정한 결과를 반환하는 연산자
 		// 조건(논리식) ? 참일때 결과 : 거짓일때 결과
-		String resultString = false ? "참" : "거짓";
+		String resultString = true ? "참" : "거짓";
 		System.out.println(resultString);
 		
 	}

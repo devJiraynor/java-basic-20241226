@@ -145,17 +145,10 @@ public class D_Operator {
 		// 논리 NOT 연산자: ! - 피연산자가 true이면 false, false이면 true
 		System.out.println(!booleanResult);
 		
-		// AND 연산의 경우 좌항이 false이면 우항의 코드는 dead code가 됨
-		// OR 연산의 경우 좌항이 true이면 우항의 코드는 dead code가 됨
 		System.out.println(a);
-		booleanResult = true || (a++ > b);
+		booleanResult = false && (a++ > b);
 		System.out.println(booleanResult);
 		System.out.println(a);
-		
-		// 삼항 연산자: 조건에 따라 지정한 결과를 반환하는 연산자
-		// 조건(논리식) ? 참일때 결과 : 거짓일때 결과
-		String resultString = false ? "참" : "거짓";
-		System.out.println(resultString);
 		
 	}
 
