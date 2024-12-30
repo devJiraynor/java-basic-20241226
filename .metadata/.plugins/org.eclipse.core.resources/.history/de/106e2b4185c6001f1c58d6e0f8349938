@@ -28,27 +28,9 @@ public class H_Controll_While {
 		
 		// continue: 반복문에서 continue를 만나면 코드 블럭의 끝으로 커서를 이동
 		// break: 반복문에서 break를 만나면 반복문을 탈출
-		// continue, break 문은 조건문과 같이 사용됨
-		
-		number = 0;
-		sum = 0;
-		while (true) {
-			System.out.print("정수 : ");
-			number = scanner.nextInt();
-			if (number <= 0) break;
-			if (number % 2 != 1) continue;
-			sum += number;
-		}
-		
-		System.out.println("총합 : " + sum);
-		
-		number = 0;
-		while (number < 10) {
-			if (number % 3 != 0) {
-				continue;
-			}
-			System.out.println(number);
-			number++;
+		while (sum > 0) {
+			System.out.println(sum);
+			break;
 		}
 		
 	}

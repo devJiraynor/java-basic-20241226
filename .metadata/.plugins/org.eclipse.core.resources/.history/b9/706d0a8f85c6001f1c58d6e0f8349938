@@ -33,22 +33,7 @@ public class H_Controll_While {
 		number = 0;
 		sum = 0;
 		while (true) {
-			System.out.print("정수 : ");
 			number = scanner.nextInt();
-			if (number <= 0) break;
-			if (number % 2 != 1) continue;
-			sum += number;
-		}
-		
-		System.out.println("총합 : " + sum);
-		
-		number = 0;
-		while (number < 10) {
-			if (number % 3 != 0) {
-				continue;
-			}
-			System.out.println(number);
-			number++;
 		}
 		
 	}

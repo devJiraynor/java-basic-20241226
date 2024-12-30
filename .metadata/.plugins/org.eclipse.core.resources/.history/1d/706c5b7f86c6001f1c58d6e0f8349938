@@ -35,21 +35,13 @@ public class H_Controll_While {
 		while (true) {
 			System.out.print("정수 : ");
 			number = scanner.nextInt();
-			if (number <= 0) break;
-			if (number % 2 != 1) continue;
+			if (number <= 0) {
+				break;
+			}
 			sum += number;
 		}
 		
 		System.out.println("총합 : " + sum);
-		
-		number = 0;
-		while (number < 10) {
-			if (number % 3 != 0) {
-				continue;
-			}
-			System.out.println(number);
-			number++;
-		}
 		
 	}
 
