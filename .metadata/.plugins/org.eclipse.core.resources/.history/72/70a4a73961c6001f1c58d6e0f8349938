@@ -98,6 +98,7 @@ public class E_Controll_If {
 		if (!isActive) return;
 		System.out.println("현역");
 		
+		
 	}
 
 }

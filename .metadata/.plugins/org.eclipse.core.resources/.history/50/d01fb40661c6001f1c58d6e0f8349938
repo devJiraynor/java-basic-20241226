@@ -71,7 +71,7 @@ public class E_Controll_If {
 		
 		// 대한민국, 성인(> 19), 남성 - 현역
 		String country = "대한민국";
-		int age = 15;
+		int age = 23;
 		String gender = "남성";
 		
 //		if (country.equals("대한민국")) {
@@ -97,6 +97,7 @@ public class E_Controll_If {
 		
 		if (!isActive) return;
 		System.out.println("현역");
+		
 		
 	}
 
