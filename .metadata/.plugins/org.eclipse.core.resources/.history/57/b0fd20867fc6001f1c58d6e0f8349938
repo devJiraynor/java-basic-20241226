@@ -38,8 +38,6 @@ public class G_Controll_For {
 			System.out.println(fruit);
 		}
 		
-		// for-each는 컬렉션의 실제 요소에 대해서 읽기전용 작업에 적합
-		// 변경하는 작업을 수행할때는 적합하지 않음
 		for (String fruit: fruits) {
 			fruit += " add";
 		}

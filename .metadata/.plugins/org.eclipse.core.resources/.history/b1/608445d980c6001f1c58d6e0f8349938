@@ -1,0 +1,18 @@
+package chapter01;
+
+public class H_Controll_While {
+
+	public static void main(String[] args) {
+		
+		// while문 : 반복할 횟수가 결정되어있지 않을 때 사용하는 반복문
+		
+		
+	}
+
+}
+
+
+
+
+
+
