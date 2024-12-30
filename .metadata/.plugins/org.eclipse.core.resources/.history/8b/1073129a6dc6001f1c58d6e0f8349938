@@ -1,0 +1,27 @@
+package chapter01;
+
+public class F_Controll_Switch {
+
+	public static void main(String[] args) {
+		
+		// switch문 : 특정 변수 혹은 표현식에 따라 실행할 코드 블럭의 범위를 결정하는 것
+		switch (일반표현식) {
+		case 값1:
+			일반표현식이 값1과 같을때 시작할 코드 블럭 위치
+		case 값2:
+			일반표현식이 값2와 같을때 시작할 코드 블럭 위치
+			switch 내부에서 break문을 만나면 switch 코드 블럭을 탈출
+			break;
+		case 값3:
+			일반표현식이 값3과 같을때 시작할 코드 블럭 위치
+		}
+		
+	}
+
+}
+
+
+
+
+
+

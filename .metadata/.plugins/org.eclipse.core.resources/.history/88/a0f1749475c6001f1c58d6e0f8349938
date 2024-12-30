@@ -1,0 +1,19 @@
+package chapter01;
+
+public class G_Controll_For {
+
+	public static void main(String[] args) {
+		
+		// 반복문 : 특정 조건에 만족하는 동안 지정한 코드 블럭을 반복 실행하도록 하는 것
+		
+		// for문 : 일반적으로 반복 횟수가 정해져 있을때 사용하는 반복문
+		
+	}
+
+}
+
+
+
+
+
+
