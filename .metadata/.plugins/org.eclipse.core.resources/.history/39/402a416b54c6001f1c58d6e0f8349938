@@ -1,0 +1,29 @@
+package chapter01;
+
+public class E_Controll_If {
+
+	public static void main(String[] args) {
+		
+		// 코드 블럭
+		// 코드들의 묶음 (여러 구문을 하나의 묶음(기능)으로 취급)
+		// {}로 표시
+		{
+			int a = 10;
+			int b = 20;
+			int result = a + b;
+			System.out.println(result);
+			
+			// int a = 0;
+		}
+		
+		int a = 0;
+		
+	}
+
+}
+
+
+
+
+
+
