@@ -1,0 +1,14 @@
+package chapter02;
+
+// JVM : 자바 가상 기계
+// 실제 컴파일된 코드를 실행하는 기계
+// 
+
+public class B_JVM {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
