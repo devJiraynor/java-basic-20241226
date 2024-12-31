@@ -1,0 +1,76 @@
+package chapter02;
+
+// 클래스 : 공통된 속성과 기능을 정의한 것
+// [접근제어자] class 클래스명 { 속성, 기능 }
+class ExampleClass1 {
+	
+	// 속성: 객체가 가지는 정보나 상태의 정의
+	// 일반적으로 변수 형태로 표현
+	int attribute1;
+	double attribute2;
+	
+	// 인스턴스 변수 : 각 인스턴스마다 독립적으로 값을 가지는 변수
+	// 반드시 인스턴스가 생성된 후에 사용 가능
+	int instanceVariable;
+	
+	// 클래스 변수 : 해당 클래스로 생성된 모든 인스턴스가 공유하는 변수
+	// 필드의 데이터 타입 앞에 static 키워드를 사용하여 지정
+	// 인스턴스 생성 없이 사용 가능
+	static int classVariable;
+	
+}
+
+// 스마트폰
+// - 가로 길이
+// - 세로 길이
+// - 운영체제
+// - 용량
+// - 식별번호
+// - 전화번호
+class SmartPhone1 {
+	double width;
+	double height;
+	String os;
+	int volume;
+	String serialNumber;
+	String telNumber;
+}
+
+public class A_Class_Object {
+
+	public static void main(String[] args) {
+		
+		// 인스턴스 : 특정 클래스로 정의된 것을 실체화한 것
+		// 클래스명 참조변수명 = new 클래스명();
+		ExampleClass1 instance1 = new ExampleClass1();
+		ExampleClass1 instance2 = new ExampleClass1();
+		
+		System.out.println(instance1);
+		System.out.println(instance2);
+		
+		// 인스턴스가 가지고 있는 속성 접근 방법
+		// 인스턴스.속성명;
+		instance1.attribute1 = 10;
+		instance2.attribute1 = 20;
+		new ExampleClass1().attribute1 = 30;
+		instance1.classVariable = 10;
+		
+		SmartPhone1 iPhone16 = new SmartPhone1();
+		SmartPhone1 galaxyS24 = new SmartPhone1();
+		
+		iPhone16.os = "iOS";
+		iPhone16.telNumber = "010-1111-1111";
+		galaxyS24.os = "Android";
+		galaxyS24.telNumber = "010-9999-9999";
+		
+		System.out.println(iPhone16.os);
+		System.out.println(galaxyS24.os);
+
+	}
+
+}
+
+
+
+
+
