@@ -1,0 +1,40 @@
+package chapter02;
+
+// 클래스 : 공통된 속성과 기능을 정의한 것
+// [접근제어자] class 클래스명 { 속성, 기능 }
+class ExampleClass1 {
+	
+	// 속성: 객체가 가지는 정보나 상태의 정의
+	// 일반적으로 변수 형태로 표현
+	int attribute1;
+	double attribute2;
+	
+}
+
+// 스마트폰
+// - 가로 길이
+// - 세로 길이
+// - 운영체제
+// - 용량
+// - 식별번호
+// - 전화번호
+class SmartPhone1 {
+	double width;
+	double height;
+	String os;
+	int volume;
+	String serialNumber;
+	String telNumber;
+}
+
+public class A_Class_Object {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+
+
