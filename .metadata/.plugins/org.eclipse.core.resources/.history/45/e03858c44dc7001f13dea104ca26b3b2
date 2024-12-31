@@ -59,13 +59,7 @@ public class B_JVM {
 		itc1.im();
 		
 		int a = 99;
-		method1(a);
-		System.out.println(a);
 		
-		EC2 b = new EC2();
-		b.iv = 99;
-		method2(b);
-		System.out.println(b.iv);
 		
 	}
 

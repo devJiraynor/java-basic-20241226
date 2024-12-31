@@ -65,7 +65,6 @@ public class B_JVM {
 		EC2 b = new EC2();
 		b.iv = 99;
 		method2(b);
-		System.out.println(b.iv);
 		
 	}
 
