@@ -151,10 +151,6 @@ public class A_Class_Object {
 //		System.out.println(galaxyS24.telNumber + "가 ");
 //		System.out.println("010-3333-2222로 전화를 겁니다.");
 		
-		// 인스턴스가 가지고 있는 메서드 호출 방법
-		// 인스턴스.메서드명(매개변수, ...);
-		iPhone16.printInfo();
-		iPhone16.onOff();
 		iPhone16.printInfo();
 		
 		System.out.println(fx1(10));

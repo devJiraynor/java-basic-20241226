@@ -31,55 +31,26 @@ class ExampleClass1 {
 	}
 	
 	// 인스턴스 메서드 : 인스턴스 생성 후 인스턴스를 통해 호출 가능한 메서드
-	// 인스턴스, 클래스 변수 및 메서드를 모두 사용 가능
 	int instanceMethod1(int arg1) {
-		// return arg1 * attribute1;
-		return arg1 * classVariable;
-	}
-	
-	// 클래스 메서드 : 인스턴스 생성없이 클래스로 호출 가능한 메서드
-	// 반환타입 앞에 static 키워드를 붙여서 선언 가능
-	// 클래스 메서드에서는 인스턴스 변수 사용 및 인스턴스 메서드 호출이 불가능
-	// 인스턴스 변수 및 인스턴스 메서드를 사용하지 않는 기능에 주로 사용됨
-	static int classMethod1(int arg1) {
-		// return arg1 * attribute1;
-		return arg1 * classVariable;
+		return arg1 * attribute1;
 	}
 	
 }
 
 // 스마트폰
+// - 가로 길이
+// - 세로 길이
 // - 운영체제
+// - 용량
+// - 식별번호
 // - 전화번호
-// - 전원상태
-// - 전원 상태 변경 작업
-// - 정보를 보여주는 작업
-// - 전화를 거는 작업
 class SmartPhone1 {
+	double width;
+	double height;
 	String os;
+	int volume;
+	String serialNumber;
 	String telNumber;
-	boolean power;
-	
-	void onOff() {
-		power = !power;
-	}
-	
-	void printInfo() {
-		if (!power) {
-			System.out.println("전원이 꺼져있습니다.");
-			return;
-		}
-		System.out.println("OS : " + os);
-		System.out.println("Tel Number : " + telNumber);
-	}
-	
-	void tel(String to) {
-		if (!power) {
-			System.out.println("전원이 꺼져있습니다.");
-			return;
-		}
-		System.out.println(telNumber + "가 " + to + "에게 전화를 겁니다.");
-	}
 }
 
 public class A_Class_Object {
@@ -145,17 +116,11 @@ public class A_Class_Object {
 		System.out.println(iPhone16.os);
 		System.out.println(galaxyS24.os);
 		
-//		System.out.println(iPhone16.telNumber + "가 ");
-//		System.out.println("010-2222-2222로 전화를 겁니다.");
-//
-//		System.out.println(galaxyS24.telNumber + "가 ");
-//		System.out.println("010-3333-2222로 전화를 겁니다.");
-		
-		// 인스턴스가 가지고 있는 메서드 호출 방법
-		// 인스턴스.메서드명(매개변수, ...);
-		iPhone16.printInfo();
-		iPhone16.onOff();
-		iPhone16.printInfo();
+		System.out.println(iPhone16.telNumber + "가 ");
+		System.out.println("010-2222-2222로 전화를 겁니다.");
+
+		System.out.println(galaxyS24.telNumber + "가 ");
+		System.out.println("010-3333-2222로 전화를 겁니다.");
 		
 		System.out.println(fx1(10));
 		System.out.println(fx1(4));
