@@ -82,42 +82,6 @@ class SmartPhone1 {
 	}
 }
 
-// 삼각형 관련 수학
-// 빗변 구하기
-// 둘레 구하기
-// 넓이 구하기
-class TriangleMath {
-	
-	// SPEED_OF_LIGHT은 TriagleMath 클래스의 단일 책임 원칙에 위배됨
-	static final int SPEED_OF_LIGHT = 300_000_000;
-	
-	static double getHypotenuse(double bottom, double height) {
-		if (bottom <= 0 || height <= 0) {
-			return 0;
-		}
-		double hypotenuse2 = Math.pow(bottom, 2) + Math.pow(height, 2);
-		double hypotenuse = Math.sqrt(hypotenuse2);
-		return hypotenuse;
-	}
-	
-	static double getCircumference(double bottom, double height, double hypotenuse) {
-		if (bottom <= 0 || height <= 0 || hypotenuse <= 0) {
-			return 0;
-		}
-		double circumference = bottom + height + hypotenuse;
-		return circumference;
-	}
-	
-	static double getArea(double bottom, double height) {
-		if (bottom <= 0 || height <= 0) {
-			return 0;
-		}
-		double area = (bottom * height) / 2;
-		return area;
-	}
-	
-}
-
 public class A_Class_Object {
 	
 	// 함수 : 특정한 기능에 대한 정의
@@ -192,7 +156,6 @@ public class A_Class_Object {
 		iPhone16.printInfo();
 		iPhone16.onOff();
 		iPhone16.printInfo();
-		iPhone16.tel("010-2222-2222");
 		
 		System.out.println(fx1(10));
 		System.out.println(fx1(4));
@@ -202,9 +165,6 @@ public class A_Class_Object {
 //		System.out.println("bmi : " + y);
 		
 		printBMI();
-		
-		double result = TriangleMath.getHypotenuse(3, 4);
-		System.out.println(result);
 		
 	}
 
