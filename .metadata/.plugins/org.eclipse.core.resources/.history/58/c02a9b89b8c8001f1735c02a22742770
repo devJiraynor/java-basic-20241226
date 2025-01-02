@@ -1,0 +1,12 @@
+package chapter02;
+
+// 상속 : 객체지향 프로그래밍의 특성 중 하나
+
+public class E_Inheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
