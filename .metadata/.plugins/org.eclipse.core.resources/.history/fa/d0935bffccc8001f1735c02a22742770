@@ -96,7 +96,6 @@ class SalesMan extends Human {
 	void sleep() {
 		// 오버라이딩을 통해서 코드의 유연성을 증가 시킬수 있음
 		System.out.println("영업 사원이 잠을 잔다");
-		// 오버라이딩을 통해 코드의 재사용성을 증가 시킬수 있음
 		super.sleep();
 		// System.out.println(name + "이 잠을 잔다");
 	}

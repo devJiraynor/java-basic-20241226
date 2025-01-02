@@ -83,23 +83,7 @@ class Police extends Human {
 // Java의 모든 클래스는 Object 클래스를 최상위 클래스로 상속받아 사용함
 
 class SalesMan extends Human {
-	int sales;
 	
-	void sale(int amount) {
-		sales += amount;
-	}
-	
-	// 오버라이딩 (Overriding): 하위 클래스에서 상위 클래스의 메서드를 '재정의' 하는 것
-	// 규칙
-	// 1. 상위 클래스에서 선언된 메서드와 이름, 매개변수 조합, 반환타입이 같아야함
-	// 2. 상위 클래스에서 선언된 메서드가 final로 선언되면 재정의가 불가능
-	void sleep() {
-		// 오버라이딩을 통해서 코드의 유연성을 증가 시킬수 있음
-		System.out.println("영업 사원이 잠을 잔다");
-		// 오버라이딩을 통해 코드의 재사용성을 증가 시킬수 있음
-		super.sleep();
-		// System.out.println(name + "이 잠을 잔다");
-	}
 }
 
 public class E_Inheritance {
@@ -113,9 +97,6 @@ public class E_Inheritance {
 		Police police = new Police();
 		police.sleep();
 		firefighter.sleep();
-		
-		SalesMan salesMan = new SalesMan();
-		salesMan.sleep();
 		
 	}
 
