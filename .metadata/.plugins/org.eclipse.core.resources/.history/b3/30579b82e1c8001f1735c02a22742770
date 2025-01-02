@@ -32,10 +32,6 @@ class NewMath {
 		return a + b;
 	}
 	
-	double add(double a, int b) {
-		return a + b;
-	}
-	
 	// 반환 타입만 다를 땐 오버로딩 불가능
 //	double add(int a, int b) {
 //		return a + b;

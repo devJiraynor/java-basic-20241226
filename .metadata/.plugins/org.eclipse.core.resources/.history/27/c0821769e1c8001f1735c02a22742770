@@ -1,6 +1,6 @@
 package chapter02;
 
-// 오버로딩(Overloading): 같은 클래스 내부에서 같은 이름의 메서드를 여러 개 작성할 수 있도록 하는 방법론
+// 오버로딩(Overloading): 같은 클래스 내부에서 같은 이름의 메서드를 여러개 작성할 수 있도록 하는 방법론
 // 오버로딩의 조건
 // 1. 메서드의 이름을 중복해서 작성하고 매개변수타입의 조합(개수, 순서)을 다르게 작성
 // 2. 메서드의 반환타입과 매개변수의 이름은 영향을 주지 않음
@@ -29,10 +29,6 @@ class NewMath {
 	
 	// 오버로딩 : 매개변수 타입의 조합이 다를 때
 	double add(int a, double b) {
-		return a + b;
-	}
-	
-	double add(double a, int b) {
 		return a + b;
 	}
 	
