@@ -1,0 +1,12 @@
+package chapter02;
+
+// 생성자(Constructor): 클래스의 인스턴스가 생성되는 순간에 호출되는 메서드
+public class D_Constructor {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}

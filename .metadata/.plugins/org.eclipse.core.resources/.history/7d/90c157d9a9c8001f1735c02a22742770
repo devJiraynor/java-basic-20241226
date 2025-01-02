@@ -1,0 +1,43 @@
+package chapter02;
+
+// 생성자(Constructor): 클래스의 인스턴스가 생성되는 순간에 호출되는 메서드
+// 클래스와 같은 이름을 가짐, 반환타입이 존재하지 않음
+// 클래스명(매개변수, ...) { 인스턴스가 생성될때 수행할 작업 }
+class Human1 {
+	String name;
+	int age;
+	String gender;
+	
+	Human1() {
+		System.out.println("Human1의 인스턴스가 생성됩니다.");
+	
+		name = "홍길동";
+		age = 20;
+		gender = "남";
+	}
+}
+
+public class D_Constructor {
+
+	public static void main(String[] args) {
+		
+		// 만약 클래스에 생성자를 정의하지 않으면
+		// 컴파일러가 자동으로 기본 생성자를 제공함
+		Human1 human1 = new Human1();
+		
+		human1.name = "이성계";
+		human1.age = 60;
+		human1.gender = "남";
+		
+		Human1 human2 = new Human1();
+		System.out.println(human2.name);
+		
+	}
+
+}
+
+
+
+
+
+

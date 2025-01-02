@@ -1,0 +1,14 @@
+package chapter02;
+
+// 생성자(Constructor): 클래스의 인스턴스가 생성되는 순간에 호출되는 메서드
+// 클래스와 같은 이름을 가짐, 반환타입이 존재하지 않음
+// 클래스명(매개변수, ...) { 인스턴스가 생성될때 수행할 작업 }
+public class D_Constructor {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}

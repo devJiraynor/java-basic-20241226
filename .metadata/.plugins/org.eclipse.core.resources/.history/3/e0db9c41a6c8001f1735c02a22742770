@@ -52,7 +52,9 @@ public class C_Overloading {
 		// newMath.add2();
 		newMath.add(1.2, 1.4);
 		newMath.add(1, 2, 3);
-		// newMath.add("0", "0");
+		newMath.add("0", "0");
+		
+		
 		
 	}
 
