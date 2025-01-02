@@ -1,0 +1,10 @@
+package chapter02_sub;
+
+import chapter02.*;
+//import chapter02.F_AccessModifier;
+
+public class AccessModifierSub2 {
+
+	F_AccessModifier instance = new F_AccessModifier();
+	
+}

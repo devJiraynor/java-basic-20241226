@@ -1,0 +1,12 @@
+package chapter02_sub;
+
+//import chapter02.*;
+// chapter02 package에 선언된 F_AccessModifier 클래스를
+// 사용하기 위해 import 
+import chapter02.F_AccessModifier;
+
+public class AccessModifierSub2 {
+
+	F_AccessModifier instance = new F_AccessModifier();
+	
+}
