@@ -1,0 +1,12 @@
+package chapter02;
+
+// 캡슐화: 인스턴스 필드와 메서드를 하나로 묶어서 필드에 대한 조작을 메서드를 통해서만 하도록 하는것
+
+public class G_Encapsulation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

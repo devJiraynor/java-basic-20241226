@@ -1,0 +1,64 @@
+package chapter02;
+
+// 캡슐화: 인스턴스 필드와 메서드를 하나로 묶어서 필드에 대한 조작을 메서드를 통해서만 하도록 하는 것
+// 정보 은닉과 데이터 보호, 데이터 무결성을 보장할 수 있음
+class Player {
+	private String name;
+	private String team;
+	private String birth;
+	private int number;
+	
+	Player(String name, String team, String birth, int number) {
+		this.name = name;
+		this.team = team;
+		this.birth = birth;
+		this.number = number;
+	}
+}
+
+public class G_Encapsulation {
+
+	public static void main(String[] args) {
+		
+		Player player1 = new Player();
+		player1.name = "이성계";
+		player1.team = "조선";
+		player1.birth = "1335-11-04";
+		player1.number = 1;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
+
+
+
+
+
