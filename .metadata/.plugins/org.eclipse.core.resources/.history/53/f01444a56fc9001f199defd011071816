@@ -8,7 +8,7 @@ package chapter02;
 // DTO (Data Transfer Object): 데이터 전송을 위한 객체
 // (불변성: 생성자와 Getter 만 유지 / 가변성: 생성자와 Getter, Setter 모두 유지)
 // VO (Value Object): 값을 표현하는 객체
-// (생성자와 Getter 만 유지, Object 클래스의 equals() 메서드를 오버라이딩 해서 사용)
+// (생성자와 Getter 만 유지)
 class Player {
 	private String name;
 	private String team;
@@ -45,32 +45,6 @@ class Player {
 	}
 	void setNumber(int number) {
 		this.number = number < 0 ? 0 : number;
-	}
-}
-
-class King {
-	private String ho;
-	private String name;
-	
-	public King(String ho, String name) {
-		this.ho = ho;
-		this.name = name;
-	}
-
-	public String getHo() {
-		return ho;
-	}
-
-	public void setHo(String ho) {
-		this.ho = ho;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 	
 }
