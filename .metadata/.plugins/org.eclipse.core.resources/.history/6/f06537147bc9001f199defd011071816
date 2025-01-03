@@ -1,0 +1,71 @@
+package chapter02;
+
+// 추상 클래스: 추상 메서드를 포함할 수 있는 클래스
+// 추상 클래스 자체로는 인스턴스를 생성할 수 없음, 반드시 추상 클래스를 상속받은 하위 클래스로 인스턴스를 생성해야 함
+// abstract class 추상클래스명 { ... }
+
+// 추상 메서드: 선언부만 존재하고 구현부는 존재하지 않는 메서드
+// 반드시 추상 클래스 내부에서만 선언할 수 있음
+// 반드시 추상 클래스를 상속받은 하위 클래스에서 재정의(오버라이딩)하여 구현해야함
+// abstract 반환타입 추상메서드명(매개변수, ...);
+
+// abstract: 추상 클래스 혹은 추상 메서드를 정의하는 제어자
+// abstract가 붙은 클래스는 인스턴스를 생성할 수 없음
+// abstract가 붙은 메서드는 구현부를 가질수 없음
+
+abstract class Occupation {
+	int annual;
+	int income;
+	
+	Occupation(int annual, int income) {
+		this.annual = annual;
+		this.income = income;
+	}
+	
+	abstract void work();
+	
+	void sleep() {
+		System.out.println("잠을 잡니다.");
+	}
+}
+
+class Developer extends Occupation {
+	String position;
+	
+	void work() {
+		System.out.println("프로그램을 개발합니다.");
+	}
+	
+	void eat(String food) {
+		System.out.println(food + "을 먹습니다.");
+	}
+}
+
+class TourGuide extends Occupation {
+	
+	String country;
+
+	@Override
+	void work() {
+		System.out.println(country + "에서 관광을 설명합니다.");
+	}
+	
+	void sleep() {
+		System.out.println("관광지에서 잠을 잡니다.");
+	}
+	
+}
+
+public class H_AbstractClass {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+
+
+
+
+
