@@ -1,0 +1,17 @@
+package chapter02;
+
+// 인터페이스: 클래스가 구현해야만 하는 메서드들의 집합을 정의해둔것
+
+public class I_Interface {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+
+
+
+
+
