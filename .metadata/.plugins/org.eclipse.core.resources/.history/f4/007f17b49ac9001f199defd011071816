@@ -1,0 +1,37 @@
+package chapter02_sub;
+
+class Controller {
+	
+}
+
+class Service {
+	
+	void serviceMethod() {
+		System.out.println("Service A");
+	}
+	
+	void serviceMethod2() {
+		System.out.println("Service A2");
+	}
+	
+}
+
+class Repository {
+	
+	void repositoryMethod() {
+		System.out.println("Repository A");
+	}
+
+	void repositoryMethod2() {
+		System.out.println("Repository A2");
+	}
+	
+}
+
+public class DIP {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

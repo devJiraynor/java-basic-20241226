@@ -1,0 +1,17 @@
+package chapter02_sub;
+
+class Controller {
+	
+}
+
+class Service {
+	
+}
+
+public class DIP {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

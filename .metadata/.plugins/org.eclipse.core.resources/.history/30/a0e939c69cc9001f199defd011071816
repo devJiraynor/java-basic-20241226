@@ -1,0 +1,75 @@
+package chapter02_sub;
+
+class Controller {
+	
+	Service service;
+	
+	Controller(Service service) {
+		this.service = service;
+	}
+	
+	void controllerMethod() {
+		System.out.println("Controller A");
+		service.serviceMethod();
+	}
+	
+	void controllerMethod2() {
+		System.out.println("Controller A2");
+		service.serviceMethod2();
+	}
+	
+}
+
+class Service {
+	
+	Repository repository;
+	
+	Service(Repository repository) {
+		this.repository = repository;
+	}
+	
+	void serviceMethod() {
+		System.out.println("Service A");
+		repository.repositoryMethod();
+	}
+	
+	void serviceMethod2() {
+		System.out.println("Service A2");
+		repository.repositoryMethod2();
+	}
+	
+}
+
+class Repository {
+	
+	void repositoryMethod() {
+		System.out.println("Repository A");
+	}
+
+	void repositoryMethod2() {
+		System.out.println("Repository A2");
+	}
+	
+}
+
+class Repository2 {
+	
+}
+
+public class DIP {
+
+	public static void main(String[] args) {
+		
+		Repository repository = new Repository();
+		Service service = new Service(repository);
+		Controller controller = new Controller(service);
+		controller.controllerMethod();
+		
+	}
+
+}
+
+
+
+
+

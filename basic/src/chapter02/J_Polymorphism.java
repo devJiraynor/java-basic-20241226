@@ -55,6 +55,13 @@ public class J_Polymorphism {
 		System.out.println(teacher2.name);
 		System.out.println(teacher2.age);
 		System.out.println(teacher2.subject);
+		
+		// 업캐스팅이 되지 않은 참조변수에 대해서는 다운캐스팅 작업시 예외 발생함
+		// Student student2 = (Student)people1;
+		
+		// Object를 활용한 업캐스팅 다운캐스팅
+		Object object1 = student1;
+		Student student2 = (Student)object1;
 
 	}
 
