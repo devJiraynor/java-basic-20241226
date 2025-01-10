@@ -1,5 +1,7 @@
 package com.korit.crud.entity;
 
+import com.korit.crud.dto.auth.SignUpRequestDto;
+
 // Entity: 저장소 객체
 public class UserEntity {
 	private String id;
@@ -10,6 +12,12 @@ public class UserEntity {
 		this.id = id;
 		this.password = password;
 		this.nickname = nickname;
+	}
+	
+	public UserEntity(SignUpRequestDto dto) {
+		this.id = dto.getId();
+		this.password = dto.getPassword();
+		this.nickname = dto.getNickname();
 	}
 
 	public String getId() {

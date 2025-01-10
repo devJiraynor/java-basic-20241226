@@ -5,12 +5,18 @@ import java.util.Scanner;
 import com.korit.crud.controller.AuthController;
 import com.korit.crud.controller.implement.AuthControllerImplement;
 import com.korit.crud.dto.auth.SignUpRequestDto;
+import com.korit.crud.repository.UserRepository;
+import com.korit.crud.repository.implement.UserRepositoryImplement;
+import com.korit.crud.service.AuthService;
+import com.korit.crud.service.implement.AuthServiceImplement;
 
 public class CrudApplication {
 
 	public static void main(String[] args) {
 		
-		AuthController authController = new AuthControllerImplement();
+		UserRepository userRepository = new UserRepositoryImplement();
+		AuthService authService = new AuthServiceImplement(userRepository);
+		AuthController authController = new AuthControllerImplement(authService);
 		
 		Scanner scanner = new Scanner(System.in);
 		
