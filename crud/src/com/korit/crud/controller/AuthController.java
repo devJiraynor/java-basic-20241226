@@ -1,5 +1,6 @@
 package com.korit.crud.controller;
 
+import com.korit.crud.dto.auth.SignInRequestDto;
 import com.korit.crud.dto.auth.SignUpRequestDto;
 
 // Controller : 클라이언트와 서버간의 접점에 해당 모듈(레이어)
@@ -10,6 +11,8 @@ import com.korit.crud.dto.auth.SignUpRequestDto;
 public interface AuthController {
 	// 회원가입
 	void signUp(SignUpRequestDto requestDto);
+	// 로그인
+	void signIn(SignInRequestDto requestDto);
 }
 
 

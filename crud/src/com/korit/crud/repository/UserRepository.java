@@ -12,6 +12,7 @@ public interface UserRepository {
 	
 	void save(UserEntity userEntity);
 	boolean existsById(String id);
+	UserEntity findById(String id);
 }
 
 

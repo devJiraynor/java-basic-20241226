@@ -1,5 +1,6 @@
 package com.korit.crud.service.implement;
 
+import com.korit.crud.dto.auth.SignInRequestDto;
 import com.korit.crud.dto.auth.SignUpRequestDto;
 import com.korit.crud.entity.UserEntity;
 import com.korit.crud.repository.UserRepository;
@@ -30,6 +31,28 @@ public class AuthServiceImplement implements AuthService {
 		UserEntity userEntity = new UserEntity(requestDto);
 		userRepository.save(userEntity);
 		System.out.println("성공했습니다.");
+	}
+
+	@Override
+	public void signIn(SignInRequestDto requestDto) {
+		// 아이디에 해당하는 정보가 있는지 확인 (인스턴스를 찾음)
+		String id = requestDto.getId();
+		UserEntity userEntity = userRepository.findById(id);
+		// - 존재하지 않는다면 '로그인에 실패했습니다.' 출력 후 메서드 종료
+		if (userEntity == null) {
+			System.out.println("로그인에 실패했습니다.");
+			return;
+		}
+		// 찾은 정보의 비밀번호와 입력한 비밀번호가 같은지 확인
+		String password = requestDto.getPassword();
+		String existPassword = userEntity.getPassword();
+		// - 같지 않다면 '로그인에 실패했습니다.' 출력 후 메서드 종료
+		if (!existPassword.equals(password)) {
+			System.out.println("로그인에 실패했습니다.");
+			return;
+		}
+		// '로그인 성공' 출력
+		System.out.println("로그인 성공");
 	}
 
 }

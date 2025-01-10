@@ -10,13 +10,20 @@ public class UserRepositoryImplement implements UserRepository {
 		for (UserEntity entity: DATABASE_LIST) {
 			if (entity.getId().equals(id)) return true;
 		}
-		
 		return false;
 	}
 
 	@Override
 	public void save(UserEntity userEntity) {
 		DATABASE_LIST.add(userEntity);
+	}
+
+	@Override
+	public UserEntity findById(String id) {
+		for (UserEntity entity: DATABASE_LIST) {
+			if (entity.getId().equals(id)) return entity;
+		}
+		return null;
 	}
 
 }
