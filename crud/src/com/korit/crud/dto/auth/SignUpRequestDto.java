@@ -36,6 +36,24 @@ public class SignUpRequestDto {
 	public String getNickname() {
 		return nickname;
 	}
+
+	@Override
+	public String toString() {
+		return "SignUpRequestDto [id=" + id + ", password=" + password + ", passwordCheck=" + passwordCheck
+				+ ", nickname=" + nickname + "]";
+	}
+	
+	public boolean idValidate() {
+		return id.length() >= 6;
+	}
+	
+	public boolean passwordValidate() {
+		return password.length() >= 8;
+	}
+	
+	public boolean isNotNull() {
+		return id != null && password != null && passwordCheck != null && nickname != null;
+	}
 	
 }
 
