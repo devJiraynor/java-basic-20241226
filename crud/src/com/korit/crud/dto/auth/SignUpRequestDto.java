@@ -43,15 +43,47 @@ public class SignUpRequestDto {
 				+ ", nickname=" + nickname + "]";
 	}
 	
-	public boolean idValidate() {
+	public boolean validate() {
+		if (!isNotNull()) {
+			System.out.println("모두 입력해주세요.");
+			return false;
+		}
+		if (!idValidate()) {
+			System.out.println("아이디는 6자 이상이어야 합니다.");
+			return false;
+		}
+		if (!passwordValidate()) {
+			System.out.println("비밀번호는 8자 이상이어야 합니다.");
+			return false;
+		}
+		if (!passwordCheckValidate()) {
+			System.out.println("비밀번호가 서로 일치하지 않습니다.");
+			return false;
+		}
+		if (!nicknameValidate()) {
+			System.out.println("닉네임은 비어있거나 공백으로만 구성할 수 없습니다.");
+			return false;
+		}
+		return true;
+	}
+	
+	private boolean idValidate() {
 		return id.length() >= 6;
 	}
 	
-	public boolean passwordValidate() {
+	private boolean passwordValidate() {
 		return password.length() >= 8;
 	}
 	
-	public boolean isNotNull() {
+	private boolean passwordCheckValidate() {
+		return password.equals(passwordCheck);
+	}
+	
+	private boolean nicknameValidate() {
+		return !nickname.isBlank();
+	}
+	
+	private boolean isNotNull() {
 		return id != null && password != null && passwordCheck != null && nickname != null;
 	}
 	
