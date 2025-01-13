@@ -12,6 +12,8 @@ import com.korit.crud.service.AuthService;
 import com.korit.crud.service.implement.AuthServiceImplement;
 
 public class CrudApplication {
+	
+	public static String SESSION = null;
 
 	public static void main(String[] args) {
 		
@@ -22,7 +24,11 @@ public class CrudApplication {
 		Scanner scanner = new Scanner(System.in);
 		
 		while (true) {
-			System.out.print("작업 : ");
+			
+			String job = SESSION == null ? 
+					"(로그인, 회원가입)" : "(정보보기, 정보수정, 정보삭제)";
+			System.out.print("작업 " + job + " : ");
+			
 			String request = scanner.nextLine();
 			
 			if (request.equals("exit")) break;

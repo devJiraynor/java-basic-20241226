@@ -7,7 +7,6 @@ import com.korit.crud.dto.auth.SignUpRequestDto;
 // 직전 비즈니스 로직 결과에 대한 데이터 검증, 다음 비즈니스 로직을 위한 데이터 검증
 // 데이터베이스를 활용한 데이터 검증, 각종 연산 및 로직
 
-
 public interface AuthService {
 	// 회원가입
 	void signUp(SignUpRequestDto requestDto);
