@@ -26,6 +26,13 @@ public class UserRepositoryImplement implements UserRepository {
 		return null;
 	}
 
+	@Override
+	public void updateByNickname(String id, String nickname) {
+		for (UserEntity entity: DATABASE_LIST) {
+			if (entity.getId().equals(id)) entity.setNickname(nickname);
+		}
+	}
+
 }
 
 

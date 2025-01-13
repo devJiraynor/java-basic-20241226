@@ -8,6 +8,7 @@ import com.korit.crud.controller.implement.AuthControllerImplement;
 import com.korit.crud.controller.implement.UserControllerImplement;
 import com.korit.crud.dto.auth.SignInRequestDto;
 import com.korit.crud.dto.auth.SignUpRequestDto;
+import com.korit.crud.dto.user.PatchSignInUserRequestDto;
 import com.korit.crud.repository.UserRepository;
 import com.korit.crud.repository.implement.UserRepositoryImplement;
 import com.korit.crud.service.AuthService;
@@ -49,6 +50,10 @@ public class CrudApplication {
 			}
 			if (request.equals("정보보기")) {
 				userController.getSignInUser();
+			}
+			if (request.equals("정보수정")) {
+				PatchSignInUserRequestDto requestDto = new PatchSignInUserRequestDto();
+				userController.patchSignInUser(requestDto);
 			}
 		}
 		

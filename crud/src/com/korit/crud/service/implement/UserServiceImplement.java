@@ -1,5 +1,6 @@
 package com.korit.crud.service.implement;
 
+import com.korit.crud.dto.user.PatchSignInUserRequestDto;
 import com.korit.crud.entity.UserEntity;
 import com.korit.crud.repository.UserRepository;
 import com.korit.crud.service.UserService;
@@ -21,6 +22,18 @@ public class UserServiceImplement implements UserService {
 			return;
 		}
 		System.out.println("아이디 : " + userEntity.getId() + " / 닉네임 : " + userEntity.getNickname());
+	}
+
+	@Override
+	public void patchSignInUser(PatchSignInUserRequestDto requestDto, String id) {
+		boolean existedUser = userRepository.existsById(id);
+		if (!existedUser) {
+			System.out.println("존재하지 않는 아이디입니다.");
+			return;
+		}
+		String nickname = requestDto.getNickname();
+		userRepository.updateByNickname(id, nickname);
+		System.out.println("성공했습니다.");
 	}
 
 }
