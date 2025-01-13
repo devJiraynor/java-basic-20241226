@@ -1,5 +1,5 @@
 package com.korit.crud.service;
 
 public interface UserService {
-	void getSignInUser();
+	void getSignInUser(String id);
 }

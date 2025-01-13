@@ -1,6 +1,5 @@
 package com.korit.crud.service.implement;
 
-import com.korit.crud.CrudApplication;
 import com.korit.crud.entity.UserEntity;
 import com.korit.crud.repository.UserRepository;
 import com.korit.crud.service.UserService;
@@ -14,13 +13,7 @@ public class UserServiceImplement implements UserService {
 	}
 	
 	@Override
-	public void getSignInUser() {
-		// 로그인 유저 아이디
-		String id = CrudApplication.SESSION;
-		if (id == null) {
-			System.out.println("로그인이 되어있지 않습니다.");
-			return;
-		}
+	public void getSignInUser(String id) {
 		// 유저 정보를 저장소에서 불러오기
 		UserEntity userEntity = userRepository.findById(id);
 		if (userEntity == null) {

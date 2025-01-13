@@ -3,13 +3,17 @@ package com.korit.crud;
 import java.util.Scanner;
 
 import com.korit.crud.controller.AuthController;
+import com.korit.crud.controller.UserController;
 import com.korit.crud.controller.implement.AuthControllerImplement;
+import com.korit.crud.controller.implement.UserControllerImplement;
 import com.korit.crud.dto.auth.SignInRequestDto;
 import com.korit.crud.dto.auth.SignUpRequestDto;
 import com.korit.crud.repository.UserRepository;
 import com.korit.crud.repository.implement.UserRepositoryImplement;
 import com.korit.crud.service.AuthService;
+import com.korit.crud.service.UserService;
 import com.korit.crud.service.implement.AuthServiceImplement;
+import com.korit.crud.service.implement.UserServiceImplement;
 
 public class CrudApplication {
 	
@@ -19,7 +23,9 @@ public class CrudApplication {
 		
 		UserRepository userRepository = new UserRepositoryImplement();
 		AuthService authService = new AuthServiceImplement(userRepository);
+		UserService userService = new UserServiceImplement(userRepository);
 		AuthController authController = new AuthControllerImplement(authService);
+		UserController userController = new UserControllerImplement(userService);
 		
 		Scanner scanner = new Scanner(System.in);
 		
@@ -40,6 +46,9 @@ public class CrudApplication {
 			if (request.equals("로그인")) {
 				SignInRequestDto requestDto = new SignInRequestDto();
 				authController.signIn(requestDto);
+			}
+			if (request.equals("정보보기")) {
+				userController.getSignInUser();
 			}
 		}
 		
