@@ -1,5 +1,7 @@
 package com.korit.crud.service.implement;
 
+import com.korit.crud.CrudApplication;
+import com.korit.crud.dto.user.DeleteSignInUserRequestDto;
 import com.korit.crud.dto.user.PatchSignInUserRequestDto;
 import com.korit.crud.entity.UserEntity;
 import com.korit.crud.repository.UserRepository;
@@ -33,6 +35,25 @@ public class UserServiceImplement implements UserService {
 		}
 		String nickname = requestDto.getNickname();
 		userRepository.updateByNickname(id, nickname);
+		System.out.println("성공했습니다.");
+	}
+
+	@Override
+	public void deleteSignInUser(DeleteSignInUserRequestDto requestDto, String id) {
+		UserEntity userEntity = userRepository.findById(id);
+		if (userEntity == null) {
+			System.out.println("존재하지 않는 아이디입니다.");
+			return;
+		}
+		String password = requestDto.getPassword();
+		String existPassword = userEntity.getPassword();
+		if (!existPassword.equals(password)) {
+			System.out.println("비밀번호가 일치하지 않습니다.");
+			return;
+		}
+		
+		userRepository.deleteOne(userEntity);
+		CrudApplication.SESSION = null;
 		System.out.println("성공했습니다.");
 	}
 

@@ -8,6 +8,7 @@ import com.korit.crud.controller.implement.AuthControllerImplement;
 import com.korit.crud.controller.implement.UserControllerImplement;
 import com.korit.crud.dto.auth.SignInRequestDto;
 import com.korit.crud.dto.auth.SignUpRequestDto;
+import com.korit.crud.dto.user.DeleteSignInUserRequestDto;
 import com.korit.crud.dto.user.PatchSignInUserRequestDto;
 import com.korit.crud.repository.UserRepository;
 import com.korit.crud.repository.implement.UserRepositoryImplement;
@@ -54,6 +55,10 @@ public class CrudApplication {
 			if (request.equals("정보수정")) {
 				PatchSignInUserRequestDto requestDto = new PatchSignInUserRequestDto();
 				userController.patchSignInUser(requestDto);
+			}
+			if (request.equals("정보삭제")) {
+				DeleteSignInUserRequestDto requestDto = new DeleteSignInUserRequestDto();
+				userController.deleteSignInUser(requestDto);
 			}
 		}
 		
