@@ -1,6 +1,7 @@
 package com.korit.crud.db;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 
 // JDBC(Java DataBase Connectivity): 
 // Java에서 데이터베이스 연결을 위한 표준 API
@@ -13,11 +14,39 @@ import java.sql.Connection;
 // - 유연성: 다양한 DBMS를 지원
 public class MySQLConnector {
 
-	public static Connection connection = null;
+	private static MySQLConnector instance = null;
+	private Connection connection;
 	
 	private final String URL = "jdbc:mysql://127.0.0.1:3306/crud";
 	private final String USER = "root";
 	private final String PASSWORD = "root";
+	
+	private MySQLConnector() {
+		try {
+			// JDBC MySQL 드라이버 로드
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			// 데이터베이스 연결
+			connection = DriverManager.getConnection(URL, USER, PASSWORD);
+		} catch (Exception exception) {
+			exception.printStackTrace();
+		}
+	}
+	
+	public static MySQLConnector getInstance() {
+		if (instance == null) {
+			// synchronized : 비동기 처리(멀티 스레드)에 대해 동기 처리가 가능하도록 함
+			synchronized (MySQLConnector.class) {
+				if (instance == null) {
+					instance = new MySQLConnector();
+				}
+			}
+		}
+		return instance;
+	}
+	
+	public Connection getConnection() {
+		return connection;
+	}
 	
 }
 

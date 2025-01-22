@@ -1,10 +1,19 @@
 package com.korit.crud.repository.implement;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
 import com.korit.crud.entity.UserEntity;
 import com.korit.crud.repository.UserRepository;
 
 public class UserRepositoryImplement implements UserRepository {
 
+	private final Connection connection;
+	
+	public UserRepositoryImplement(Connection connection) {
+		this.connection = connection;
+	}
+	
 	@Override
 	public boolean existsById(String id) {
 		for (UserEntity entity: DATABASE_LIST) {
@@ -15,7 +24,21 @@ public class UserRepositoryImplement implements UserRepository {
 
 	@Override
 	public void save(UserEntity userEntity) {
-		DATABASE_LIST.add(userEntity);
+		
+		final String SQL = "INSERT INTO user VALUES (?, ?, ?)";
+		
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+			preparedStatement.setString(1, userEntity.getId());
+			preparedStatement.setString(2, userEntity.getPassword());
+			preparedStatement.setString(3, userEntity.getNickname());
+			
+			preparedStatement.executeUpdate();			
+		} catch (Exception exception) {
+			exception.printStackTrace();
+		}
+		
+		// DATABASE_LIST.add(userEntity);
 	}
 
 	@Override
