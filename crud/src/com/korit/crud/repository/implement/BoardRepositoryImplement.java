@@ -66,14 +66,14 @@ public class BoardRepositoryImplement implements BoardRepository {
 		
 		BoardViewVO board = null;
 		
-		final String SQL = "SELECT B.title, B.contents, B.writer_id, U.nickname, B.write_date FROM board B INNER JOIN user U WHERE B.board_number = ? ORDER BY board_number DESC";
+		final String SQL = "SELECT B.title, B.contents, B.writer_id, U.nickname, B.write_date FROM board B INNER JOIN user U WHERE B.board_number = ?";
 		
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 			preparedStatement.setInt(1, boardNumber);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			
-			while (resultSet.next()) {
+			if (resultSet.next()) {
 				String title = resultSet.getString(1);
 				String contents = resultSet.getString(2);
 				String writerId = resultSet.getString(3);
