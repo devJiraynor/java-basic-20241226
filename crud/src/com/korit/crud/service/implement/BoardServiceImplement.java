@@ -6,6 +6,7 @@ import com.korit.crud.dto.board.PatchBoardRequestDto;
 import com.korit.crud.dto.board.PostBoardRequestDto;
 import com.korit.crud.entity.BoardEntity;
 import com.korit.crud.repository.BoardRepository;
+import com.korit.crud.repository.UserRepository;
 import com.korit.crud.service.BoardService;
 import com.korit.crud.vo.BoardListVO;
 import com.korit.crud.vo.BoardViewVO;
@@ -13,13 +14,23 @@ import com.korit.crud.vo.BoardViewVO;
 public class BoardServiceImplement implements BoardService {
 	
 	private final BoardRepository boardRepository;
+	private final UserRepository userRepository;
 	
-	public BoardServiceImplement(BoardRepository boardRepository) {
+	public BoardServiceImplement(
+			BoardRepository boardRepository,
+			UserRepository userRepository
+	) {
 		this.boardRepository = boardRepository;
+		this.userRepository = userRepository;
 	}
 
 	@Override
 	public void postBoard(PostBoardRequestDto requestDto, String id) {
+		boolean isExistUser = userRepository.existsById(id);
+		if (!isExistUser) {
+			System.out.println("존재하지 않는 아이디입니다.");
+			return;
+		}
 		BoardEntity boardEntity = new BoardEntity(requestDto, id);
 		boardRepository.save(boardEntity);
 		System.out.println("작성에 성공했습니다.");

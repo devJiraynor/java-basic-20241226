@@ -20,9 +20,7 @@ public class BoardRepositoryImplement implements BoardRepository {
 	}
 
 	@Override
-	public boolean save(BoardEntity boardEntity) {
-		boolean result = false;
-		
+	public void save(BoardEntity boardEntity) {
 		final String SQL = "INSERT INTO board (title, contents, write_date, writer_id) VALUES (?, ?, CURDATE(), ?)";
 		
 		try {
@@ -30,14 +28,10 @@ public class BoardRepositoryImplement implements BoardRepository {
 			preparedStatement.setString(1, boardEntity.getTitle());
 			preparedStatement.setString(2, boardEntity.getContents());
 			preparedStatement.setString(3, boardEntity.getWriterId());
-			preparedStatement.executeUpdate();	
-			
-			result = true;
+			preparedStatement.executeUpdate();
 		} catch (Exception exception) {
 			exception.printStackTrace();
 		}
-		
-		return result;
 	}
 
 	@Override

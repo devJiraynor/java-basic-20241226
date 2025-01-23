@@ -8,7 +8,7 @@ import com.korit.crud.vo.BoardViewVO;
 
 public interface BoardRepository {
 
-	boolean save(BoardEntity boardEntity);
+	void save(BoardEntity boardEntity);
 	
 	List<BoardListVO> findAll();
 	BoardViewVO findById(Integer boardNumber);

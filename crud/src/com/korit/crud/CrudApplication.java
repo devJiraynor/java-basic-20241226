@@ -37,7 +37,7 @@ public class CrudApplication {
 		
 		BoardRepository boardRepository = new BoardRepositoryImplement(connection);
 		UserRepository userRepository = new UserRepositoryImplement(connection);
-		BoardService boardService = new BoardServiceImplement(boardRepository);
+		BoardService boardService = new BoardServiceImplement(boardRepository, userRepository);
 		AuthService authService = new AuthServiceImplement(userRepository);
 		UserService userService = new UserServiceImplement(userRepository);
 		BoardController boardController = new BoardControllerImplement(boardService);
